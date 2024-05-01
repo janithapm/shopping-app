@@ -1,1 +1,13 @@
-<p>shopping-list works!</p>
+<div class="row">
+    <div class="col-xs-10">
+    </div>
+    <hr>
+    <ul class="list-group">
+        @for (ingredent of ingredents; track $index) {
+        <a href="#" class="list-group-item" style="cursor: pointer;">{{ingredent.name}} {{ingredent.amount}}</a>
+        }
+
+    </ul>
+</div>
+<app-shopping-edit>
+</app-shopping-edit>

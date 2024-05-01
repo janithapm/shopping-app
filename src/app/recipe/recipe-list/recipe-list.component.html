@@ -1,1 +1,25 @@
-<p>recipe-list works!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Recipe</button>
+    </div>
+    <hr>
+    <div class="col-xs-12">
+        @for (recipe of recipes; track $index) {
+            <div class="col-xs-12">
+                <a href="#" class="list-group-item clearfix">
+                    <div class="pull-left">
+                        <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+                        <p class="list-group-item-text">{{recipe.description}}</p>
+                    </div>
+                    <div class="pull-right">
+                        <img src="{{recipe.imagePath}}" alt="" class="img-response" style="max-height: 100px;">
+                    </div>
+                </a>
+            </div>
+        }
+        <app-recipe-item></app-recipe-item>
+    </div>
+
+
+</div>
+
